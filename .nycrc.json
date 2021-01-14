@@ -1,0 +1,7 @@
+{
+	"all": true,
+	"produce-source-map": true,
+	"include": [
+		"lib/**"
+	]
+}
