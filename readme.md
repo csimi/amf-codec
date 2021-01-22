@@ -36,6 +36,32 @@ const data = Buffer.from([1, 1]);
 console.log(fromAMF(data));
 ```
 
+## Decode from arbitrary position
+
+For example to skip the first byte of buffer:
+
+```
+const { decodeAMF, Memo } = require('amf-codec');
+
+const data = Buffer.from([0, 1, 1]);
+
+console.log(decodeAMF(data, new Memo(1)));
+```
+
+## Memo class
+
+```
+const { Memo } = require('amf-codec');
+
+const data = Buffer.from([0, 1, 2, 3, 4, 5, 6]);
+const memo = new Memo(1); // set initial position to ignore 1 byte
+
+console.log(data.readUInt16BE(memo.consume(2)/* === 1 */));
+// consume(amount of bytes) returns current position before increasing its value
+console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
+// skip(amount of bytes) increases position before returning its value
+```
+
 # Supported types
 
 - number
