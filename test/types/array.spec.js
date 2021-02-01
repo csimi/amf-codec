@@ -6,15 +6,37 @@ const {
 	fromAMF,
 } = require('../..');
 
-const { array } = require('../fixtures/types');
-const arrayFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'array.bin'));
+const {
+	empty,
+	dense,
+	sparse,
+} = require('../fixtures/array');
+const emptyArrayFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'array-empty.bin'));
+const denseArrayFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'array-dense.bin'));
+const sparseArrayFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'array-sparse.bin'));
 
 describe('array', () => {
-	it('encodes array', () => {
-		return expect(toAMF(array)).to.deep.equal(arrayFixture);
+	it('encodes empty array', () => {
+		return expect(toAMF(empty)).to.deep.equal(emptyArrayFixture);
 	});
 	
-	it('decodes array', () => {
-		return expect(fromAMF(arrayFixture)).to.deep.equal(array);
+	it('encodes dense array', () => {
+		return expect(toAMF(dense)).to.deep.equal(denseArrayFixture);
+	});
+	
+	it('encodes sparse array', () => {
+		return expect(toAMF(sparse)).to.deep.equal(sparseArrayFixture);
+	});
+	
+	it('decodes empty array', () => {
+		return expect(fromAMF(emptyArrayFixture)).to.deep.equal(empty);
+	});
+	
+	it('decodes dense array', () => {
+		return expect(fromAMF(denseArrayFixture)).to.deep.equal(dense);
+	});
+	
+	it('decodes sparse array', () => {
+		return expect(fromAMF(sparseArrayFixture)).to.deep.equal(sparse);
 	});
 });
