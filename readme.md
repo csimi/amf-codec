@@ -67,6 +67,7 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 - number
 - boolean
 - string
+- ecma array
 - object
 - null
 - undefined
@@ -78,7 +79,6 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 
 - movieclip
 - reference
-- ecma array
 - unsupported
 - recordset
 - xml document
