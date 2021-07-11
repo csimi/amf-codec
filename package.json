@@ -1,6 +1,6 @@
 {
   "name": "amf-codec",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "AMF0 codec with tiny size and high performance",
   "main": "lib/index.js",
   "scripts": {
