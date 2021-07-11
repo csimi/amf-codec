@@ -9,6 +9,7 @@ const {
 const { object } = require('../fixtures/types');
 const objectFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'object.bin'));
 const ecmaArrayFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'ecma-array.bin'));
+const typedObjectFixture = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'typed-object.bin'));
 
 describe('object', () => {
 	it('encodes object', () => {
@@ -21,5 +22,9 @@ describe('object', () => {
 	
 	it('decodes ecma array', () => {
 		return expect(fromAMF(ecmaArrayFixture)).to.deep.equal(object);
+	});
+	
+	it('decodes typed object', () => {
+		return expect(fromAMF(typedObjectFixture)).to.deep.equal(object);
 	});
 });

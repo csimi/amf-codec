@@ -74,6 +74,7 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 - strict array
 - date
 - long string
+- typed object
 
 # Not supported types
 
@@ -82,5 +83,4 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 - unsupported
 - recordset
 - xml document
-- typed object
 - avmplus object
