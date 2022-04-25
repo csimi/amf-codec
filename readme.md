@@ -71,6 +71,7 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 - object
 - null
 - undefined
+- reference
 - strict array
 - date
 - long string
@@ -79,7 +80,6 @@ console.log(data.slice(memo.position/* === 3*/, memo.skip(4)/* === 7*/));
 # Not supported types
 
 - movieclip
-- reference
 - unsupported
 - recordset
 - xml document
