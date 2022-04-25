@@ -27,7 +27,12 @@ describe('object', () => {
 	});
 	
 	it('decodes ecma object', () => {
-		return expect(fromAMF(ecmaObjectFixture)).to.deep.equal(object);
+		const arr = Object.entries(object).reduce((accumulator, [key, value]) => {
+			accumulator[key] = value;
+			return accumulator;
+		}, []);
+		
+		return expect(fromAMF(ecmaObjectFixture)).to.deep.equal(arr);
 	});
 	
 	it('decodes typed object', () => {
