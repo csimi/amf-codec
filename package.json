@@ -22,7 +22,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "mocha": "^8.2.1",
-    "nyc": "^15.1.0",
+    "nyc": "^18.0.0",
     "source-map-support": "^0.5.19"
   },
   "files": [
