@@ -38,10 +38,10 @@ describe('object', () => {
 	it('decodes typed object', () => {
 		return expect(fromAMF(typedObjectFixture)).to.deep.equal(object);
 	});
-
+	
 	it('throws when a key exceeds the maximum length', () => {
 		const value = { ['a'.repeat(65536)]: true };
-
+		
 		return expect(() => toAMF(value)).to.throw(RangeError);
 	});
 });

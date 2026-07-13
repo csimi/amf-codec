@@ -13,7 +13,7 @@ describe('Memo', () => {
 		
 		return expect(memo.position).to.equal(1);
 	});
-
+	
 	describe('consume()', () => {
 		let memo;
 		
@@ -31,7 +31,7 @@ describe('Memo', () => {
 			return expect(memo.position).to.equal(2);
 		});
 	});
-
+	
 	describe('skip()', () => {
 		let memo;
 		

@@ -17,10 +17,10 @@
     "url": "git@github.com:csimi/amf-codec.git"
   },
   "devDependencies": {
-    "@csimi/eslint-config": "^3.0.0",
+    "@csimi/eslint-config": "^4.0.1",
     "chai": "^4.2.0",
     "cross-env": "^7.0.3",
-    "eslint": "^7.17.0",
+    "eslint": "^8.57.1",
     "mocha": "^8.2.1",
     "nyc": "^18.0.0",
     "source-map-support": "^0.5.19"
